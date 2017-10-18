@@ -1,0 +1,50 @@
+﻿<Window x:Class="GitFixer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GitFixer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="390" Width="560">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="GitHub Proxy Fixer" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold"/>
+
+        <Label Content="1" Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+        <TextBlock Grid.Column="1" Text="Open the Solution you would like to patch. (Defaults to your U:\ Drive)." 
+               HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="15" Grid.Row="1" Margin="5"/>
+        <Button Grid.Column="2" Name="btnOpenFile" Click="BtnOpenFile_Click" Grid.Row="1"  Margin="5">Open Project</Button>
+
+        <Label Content="2" Grid.Column="0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+        <Label Content="GitHub Username: " Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
+        <TextBox x:Name="GitUsernameTextBox" Grid.Column="2" Grid.Row="2" Margin="5" FontSize="16"/>
+
+        <Label Content="3" Grid.Column="0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+        <Label Content="GitHub Password: " Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
+        <PasswordBox x:Name="GitPasswordTextBox" Grid.Column="2" Grid.Row="3" Margin="5" FontSize="16"/>
+
+        <Label Content="4" Grid.Column="0" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+        <Label Content="School Username: " Grid.Column="1" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
+        <TextBox x:Name="SchoolUsernameTextBox" Grid.Column="2" Grid.Row="4" Margin="5" FontSize="16"/>
+
+        <Label Content="5" Grid.Column="0" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+        <Label Content="School Password: " Grid.Column="1" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
+        <PasswordBox x:Name="SchoolPasswordTextBox" Grid.Column="2" Grid.Row="5" Margin="5" FontSize="16"/>
+
+        <Button x:Name="FixButton" Grid.Row="6" Grid.ColumnSpan="3" Content="Fix!" Margin="5" FontSize="18" FontWeight="Bold" Click="FixButton_Click"/>
+    </Grid>
+</Window>
