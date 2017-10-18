@@ -113,6 +113,10 @@ namespace GitFixer
             {
                 FixButton.IsEnabled = false;
             }
+            else
+            {
+                FixButton.IsEnabled = true;
+            }
         }
 
         private void GitPasswordTextBox_PasswordChanged(object sender, RoutedEventArgs e)
@@ -120,6 +124,10 @@ namespace GitFixer
             if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" || SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
             {
                 FixButton.IsEnabled = false;
+            }
+            else
+            {
+                FixButton.IsEnabled = true;
             }
         }
 
@@ -129,6 +137,10 @@ namespace GitFixer
             {
                 FixButton.IsEnabled = false;
             }
+            else
+            {
+                FixButton.IsEnabled = true;
+            }
         }
 
         private void SchoolPasswordTextBox_PasswordChanged(object sender, RoutedEventArgs e)
@@ -136,6 +148,10 @@ namespace GitFixer
             if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" || SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
             {
                 FixButton.IsEnabled = false;
+            }
+            else
+            {
+                FixButton.IsEnabled = true;
             }
         }
         #endregion

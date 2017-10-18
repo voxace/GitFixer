@@ -45,6 +45,6 @@
         <Label Content="School Password: " Grid.Column="1" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
         <PasswordBox x:Name="SchoolPasswordTextBox" Grid.Column="2" Grid.Row="5" Margin="5" FontSize="16" PasswordChanged="SchoolPasswordTextBox_PasswordChanged"/>
 
-        <Button x:Name="FixButton" Grid.Row="6" Grid.ColumnSpan="3" Content="Fix!" Margin="5" FontSize="18" FontWeight="Bold" Click="FixButton_Click"/>
+        <Button x:Name="FixButton" Grid.Row="6" Grid.ColumnSpan="3" Content="Fix!" Margin="5" FontSize="18" FontWeight="Bold" Click="FixButton_Click" IsEnabled="False"/>
     </Grid>
 </Window>
