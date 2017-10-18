@@ -31,19 +31,19 @@
 
         <Label Content="2" Grid.Column="0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
         <Label Content="GitHub Username: " Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
-        <TextBox x:Name="GitUsernameTextBox" Grid.Column="2" Grid.Row="2" Margin="5" FontSize="16"/>
+        <TextBox x:Name="GitUsernameTextBox" Grid.Column="2" Grid.Row="2" Margin="5" FontSize="16" TextChanged="GitUsernameTextBox_TextChanged"/>
 
         <Label Content="3" Grid.Column="0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
         <Label Content="GitHub Password: " Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
-        <PasswordBox x:Name="GitPasswordTextBox" Grid.Column="2" Grid.Row="3" Margin="5" FontSize="16"/>
+        <PasswordBox x:Name="GitPasswordTextBox" Grid.Column="2" Grid.Row="3" Margin="5" FontSize="16" PasswordChanged="GitPasswordTextBox_PasswordChanged"/>
 
         <Label Content="4" Grid.Column="0" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
         <Label Content="School Username: " Grid.Column="1" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
-        <TextBox x:Name="SchoolUsernameTextBox" Grid.Column="2" Grid.Row="4" Margin="5" FontSize="16"/>
+        <TextBox x:Name="SchoolUsernameTextBox" Grid.Column="2" Grid.Row="4" Margin="5" FontSize="16" TextChanged="SchoolUsernameTextBox_TextChanged"/>
 
         <Label Content="5" Grid.Column="0" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
         <Label Content="School Password: " Grid.Column="1" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
-        <PasswordBox x:Name="SchoolPasswordTextBox" Grid.Column="2" Grid.Row="5" Margin="5" FontSize="16"/>
+        <PasswordBox x:Name="SchoolPasswordTextBox" Grid.Column="2" Grid.Row="5" Margin="5" FontSize="16" PasswordChanged="SchoolPasswordTextBox_PasswordChanged"/>
 
         <Button x:Name="FixButton" Grid.Row="6" Grid.ColumnSpan="3" Content="Fix!" Margin="5" FontSize="18" FontWeight="Bold" Click="FixButton_Click"/>
     </Grid>

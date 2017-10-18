@@ -22,6 +22,7 @@ namespace GitFixer
             configPath = $@"C:\Users\{logon}\.gitconfig";
         }
 
+        // Open File Button
         private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -49,6 +50,7 @@ namespace GitFixer
             }
         }
 
+        // Fix Button
         private void FixButton_Click(object sender, RoutedEventArgs e)
         {
             if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" ||SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
@@ -102,5 +104,40 @@ namespace GitFixer
                 MessageBox.Show("GitHub Fix Was Successful!");
             }
         }
+
+        // Input Validation
+        #region Input Validation
+        private void GitUsernameTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" || SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
+            {
+                FixButton.IsEnabled = false;
+            }
+        }
+
+        private void GitPasswordTextBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" || SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
+            {
+                FixButton.IsEnabled = false;
+            }
+        }
+
+        private void SchoolUsernameTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" || SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
+            {
+                FixButton.IsEnabled = false;
+            }
+        }
+
+        private void SchoolPasswordTextBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (GitPasswordTextBox.Password == "" || GitUsernameTextBox.Text == "" || SchoolPasswordTextBox.Password == "" || SchoolUsernameTextBox.Text == "")
+            {
+                FixButton.IsEnabled = false;
+            }
+        }
+        #endregion
     }
 }
